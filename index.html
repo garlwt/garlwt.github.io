@@ -9,6 +9,15 @@
   </head>
   <body>
     Redirecting...
-    <script src="index.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      if (code) {
+        // Redirect to Flutter app with custom URI
+        window.location.href = `myapp://auth?code=${code}`;
+      } else {
+        document.body.innerText = 'No code received';
+      }
+    </script>
   </body>
 </html>
