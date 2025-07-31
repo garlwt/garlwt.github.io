@@ -14,7 +14,7 @@
       const code = params.get('code');
       if (code) {
         // Redirect to Flutter app with custom URI
-        window.location.href = `myapp://auth?code=${code}`;
+        window.location.href = `exp://192.168.1.9:8081?code=${code}`;
       } else {
         document.body.innerText = 'No code received';
       }
